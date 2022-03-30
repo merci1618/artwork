@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: PoiretOne;
+	src: url(../webfonts/PoiretOne-Regular.eot);
+	src: url(../webfonts/PoiretOne-Regular.woff) format("woff"),
+		 url(../webfonts/PoiretOne-Regular.ttf) format("ttf");
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #555;
+}
+body {
+	width: 100%;
+	font-family: PoiretOne;
+	background: #ddd;
+}
+h1 {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+h1 img {
+	width: 200px;
+	height: 200px;
+	box-shadow: 5px 5px 3px #888;
+}
+#sns {
+	position: fixed;
+	top: 30px;
+	left: 40px;
+}
+#sns li {
+	float: left;
+	margin-right: 20px;
+}
+#sns li i {
+	font-size: 26px;
+	color: #fff;
+	transition: all 0.8s;
+}
+#sns li:hover i {
+	color: #888;
+	transform: scale(1.2);
+}
+#navi {
+	position: fixed;
+	top: 100px;
+	left: 40px;
+	/*margin-top: -300px;*/
+}
+#navi li {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	margin-right: 30px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+#navi li:hover, #navi li.on {
+	color: #888;
+}
+.txt {
+	position: fixed;
+	top: 50%;
+	right: 20px;
+	margin-top: -40px;
+	font-size: 100px;
+	color: #fff;
+	text-align: right;
+	line-height: 0.5;
+}
+.txt span {
+	color: #aaa;
+}
+.txt em {
+	font: 18px Arial;
+	font-style: normal;
+	color: #888;
+}
+section {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	margin-top: -250px;
+	/*width: 4600px;*/
+	height: 500px;
+}
+article {
+	position: relative;
+	top: 50%;
+	width: 180px;
+	height: 400px;
+	margin: 10px;
+	margin-top: -200px;
+	box-sizing: border-box;
+	display: inline-block;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px #bbb;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+article h2 {
+	position: absolute;
+	top: 300px;
+	right: 0;
+	width: 100%;
+	height: 50px;
+	background: #111;
+	padding-left: 20px;
+	box-sizing: border-box;
+	opacity: 0.4;
+	cursor: pointer;
+	transition: all 0.5s;
+	z-index: 2;
+}
+article:hover h2 {
+	opacity: 0.8;
+}
+article h2 a {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 50px;
+	letter-spacing: 2px;
+	color: #fff;
+}
+article strong {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 300px;
+	opacity: 0.4;
+	transition: all 0.5s;
+}
+article:hover strong {
+	opacity: 1;
+}
+article strong img {
+	height: 300px;
+}
+article p {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: 0;
+	width: 100%;
+	height: 0;
+	text-align: center;
+	background: #fff;
+	opacity: 0;
+	transition: all 0.5s;
+}
+article p img {
+	height: 100%;
+}
+article em {
+	position: absolute;
+	bottom: 50px;
+	right: -300px;
+	display: inline-block;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	background: #000;
+	color: #fff;
+	opacity: 0.8;
+}
+article span {
+	position: absolute;
+	top: 110px;
+	right: -300px;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 3;
+}
+/* 클릭시 변형된 모습 */
+article.on {
+	width: 600px;
+	height: 500px;
+	margin-top: -250px;
+}
+article.on h2 {
+	top: 100px;
+	height: 100px;
+	background: #111;
+	opacity: 0.3;
+}
+article.on h2 a {
+	font-size: 30px;
+	color: #fff;
+}
+article.on strong {
+	opacity: 0;
+}
+article.on p {
+	height: 500px;
+	margin-top: -250px;
+	opacity: 1;
+}
+article.on em {
+	right: 20px;	
+}
+article.on span {
+	right: 20px;
+	transition: all 0.6s;
+}
+article:hover span {
+	transform: scale(1.2);
+}
